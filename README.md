@@ -1,0 +1,2 @@
+# blackjack-console
+console blackjack

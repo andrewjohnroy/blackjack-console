@@ -105,6 +105,14 @@ while True:
 
             if house_card == 21 and player_card == 21 and house_number_of_cards == 2 and player_number_of_cards == 2:
                 print("Dealer and you get Blackjack. You win!")
+            elif house_card == 21 and house_number_of_cards == 2 and player_soft:
+                print("Dealer gets Blackjack. You lose with soft " + str(player_card))
+            elif house_card == 21 and house_number_of_cards == 2:
+                print("Dealer gets Blackjack. You lose with " + str(player_card))
+            elif player_card == 21 and player_number_of_cards == 2:
+                print("You get Blackjack! Dealer loses with " + str(house_card))
+            elif player_card == 21 and player_number_of_cards == 2 and house_soft:
+                print("You get Blackjack! Dealer loses with soft " + str(house_card))
             elif house_card > player_card and house_card <= 21:
                 print("Dealer wins with " + str(house_card) + ", while you got " + str(player_card))
             elif player_card > house_card and player_card <= 21:
